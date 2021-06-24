@@ -5,8 +5,8 @@ function App() {
   return (
     <div className="App">
       <h1>hasla-records</h1>
-      <Row name="jyk"></Row>
-      <Row name="khy"></Row>
+      <Row name="aaa"></Row>
+      <Row name="bbb"></Row>
     </div>
   )
 }
