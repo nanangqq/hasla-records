@@ -1,6 +1,6 @@
 import Router from 'koa-router'
 import { executeQ } from './util'
-import Axios from 'axios'
+// import Axios from 'axios'
 
 const api = new Router()
 
