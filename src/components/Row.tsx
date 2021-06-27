@@ -1,7 +1,9 @@
 import styled from 'styled-components'
+import Record, { RecordProps } from './Record'
 
 type RowProps = {
-  name: String
+  onCharge: String
+  records: RecordProps[]
 }
 
 const NameBox = styled.div`
@@ -22,8 +24,31 @@ const NameBox = styled.div`
   justify-content: center;
 `
 
-function Row({ name }: RowProps) {
-  return <NameBox>{name}</NameBox>
+function Row({ onCharge, records }: RowProps) {
+  console.log(records)
+  return (
+    <div>
+      <NameBox>{onCharge}</NameBox>
+      {/* <Record
+        amount={10000}
+        name="123"
+        date={new Date()}
+        description="blahblah"
+        charge="divide"
+      /> */}
+      {records.map(rec => (
+        <Record
+          on_charge={rec.on_charge}
+          amount={rec.amount}
+          name={rec.name}
+          date={new Date(rec.date)}
+          description={rec.description}
+          charge={rec.charge}
+          to={rec.to}
+        />
+      ))}
+    </div>
+  )
 }
 
 export default Row
